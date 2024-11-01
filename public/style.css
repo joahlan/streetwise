@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1efe7;
+}
+
+#logo{
+    margin-right: 900px;
+    padding: 50px;
+}
+
+#layout{
+    display: flex;
+    padding: 30px;
+}
+
+.blusas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 12px #9090907a;
+    height: 350px;
+}
+
+button{
+    border-radius: 3px;
+    padding: 5px;
+    width: 80px;
+    border: 0px;
+    margin-top: 30px;
+    background-color: #f1efe7;
+    transform: 0.5s;
+}
+
+button:hover{
+    transition: scale(1.0px);
+}
+
+#icons{
+    margin-left: 800px ;
+    margin-bottom: 50px;
+}
+
+#a{
+    color: black;
+}
