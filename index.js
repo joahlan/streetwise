@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/public/incio.html"));
+    res.sendFile(path.join(__dirname + "/public/inicio.html"));
 })
 
 
@@ -29,7 +29,16 @@ app.get("/criartabela", (req, res) => {
 
 
 
-app.post("/cadas", (req, res) => {
+app.get("/cadastro", (req, res) => {
+    res.sendFile(path.join(__dirname + "/public/cadastro.html"));
+})
+
+
+
+
+
+
+app.post("/validarcadastro", (req, res) => {
 
     console.log(req.body);
 
@@ -41,12 +50,15 @@ app.post("/cadas", (req, res) => {
     var telefone = req.body.telefone;
     var cep = req.body.cep;
 
-    var sql = "INSERT INTO CADASTROS (NOME, USUARIO, EMAIL, SENHA, CPF, TELEFONE, CEP), VALUES( ?, ?, ?, ?, ?, ?, ? );";
+    var sql = "INSERT INTO CADASTROS (NOME, USUARIO, EMAIL, SENHA, CPF, TELEFONE, CEP) VALUES ( ?, ?, ?, ?, ?, ?, ? );";
     
     db.run(sql, [nome, usuario, email, senha, cpf, telefone, cep], (err) => {
         if(err) res.send(err);
         else res.send("cadastro realizado!");
     });
 });
+
+
+
 
 app.listen(3000, console.log("rodando..."))
