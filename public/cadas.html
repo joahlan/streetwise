@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+
+    <script>
+
+
+
+        function enviar() {
+
+            const info = {
+                "nome": document.getElementById("nome").value,
+                "usuario": document.getElementById("usuario").value,
+                "email": document.getElementById("email").value,
+                "senha": document.getElementById("senha").value,
+                "cpf": document.getElementById("cpf").value,
+                "telefone": document.getElementById("telefone").value,
+                "cep": document.getElementById("cep").value
+            }
+
+        const config = {
+                method: 'POST',
+                headers: {'Content-Type' : 'application/json'},
+                body: JSON.stringify(info)
+        }
+
+            fetch("/validarcadastro", config)
+            .then(response => response.text())
+            .then(resposta =>{
+                alert(resposta);
+            })
+
+        }
+
+        
+    </script>
+
+
+</head>
+
+<body>
+    <h1>faça seu cadastro</h1>
+
+        <p>Nome</p>
+        <input id="nome" placeholder="Nome e sobrenome">
+        <p>Usuario</p>
+        <input id="usuario" placeholder="Como podemos te chamar?">
+        <p>Email</p>
+        <input id="email" placeholder="Digite o seu Email...">
+        <p>Senha</p>
+        <input id="senha" type="password" placeholder="Crie uma senha">
+        <p>Cpf</p>
+        <input id="cpf" placeholder="Digite o seu Cpf...">
+        <p>Telefone</p>
+        <input id="telefone" placeholder="Telefone de contato">
+        <p>Cep</p>
+        <input id="cep" placeholder="Seu endereço">
+        <br>
+        <button onclick="enviar()">cadastrar</button>
+
+</body>
+</html>

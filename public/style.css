@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(238 238 238 / 49%);
+    font-family: "Signika";
+    margin: 0%;
+}
+
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(205 191 0);
+}
+
+#cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #d6d6d6;
+    box-shadow: 0px 3px 12px 0px #b7b7b7;
+
+    width: 100%;
+    margin-bottom: 100px;
+    height: 250px;
+}
+
+#logo{
+    margin-right: 140px;
+    margin-bottom: 15px;
+    padding: 50px;
+}
+
+
+
+.pesquisa{
+    display: flex;
+
+    background-color: #c9c9c9;
+    box-shadow: 0px 0px 12px #cecece;
+    border-radius: 3px;
+
+    margin-right: 160px;
+    width: 500px;
+    padding: 5px;
+}
+
+#input-pesquisa{
+    padding: 7px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    font-family: "Montserrat";
+    background-color: transparent;
+}
+
+
+ 
+.menu{
+    display: flex;
+    position: absolute;
+    margin-top: 200px;
+}
+
+#menu-list{
+    color: black;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+#menu-list:hover{
+    transform: translateY(-3px);
+    color: rgb(170, 143, 69);
+}
+
+#menu-list:not(:last-child){
+    margin-right: 80px;
+}
+
+
+
+#a-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 90px;
+}
+
+.icons{
+    transition: all 0.4s;
+}
+
+.icons:hover{
+    transform: translateY(-3px);
+}
+
+.icons:not(:last-child){
+    margin-right: 20px;
+}
+
+
+
+.layout{
+    display: flex;
+    padding: 30px;
+}
+
+.blusas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 5px;
+    margin-right: 20px;
+
+    width: 260px;
+    height: 380px;
+
+    border: 1px solid #b7b7b7;
+    border-radius: 3px;
+}
+
+.descri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.dynamic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    margin: 5px;
+    margin-top: 15px;
+
+    background-color:rgb(205 191 0);
+
+    height: 25px;
+    width: 100%;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 13px;
+    width: 100px;
+    border: 0px;
+    margin-top: 30px;
+
+    background-color: rgb(17 17 17);
+    box-shadow: 0px 0px 12px #9090907a;
+    color: white;
+    font-family: "Montserrat";
+
+    transition: 1s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(56, 56, 56);
+    transform: scale(1.05);
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(17 17 17);
+    color: white;
+    font-family: "Montserrat";
+
+    width: 100%;
+    margin-top: 100px;
+    border-radius: 3px;
+}
+
+.info{
+    display: flex;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+
+
+
+
+.slider{
+    margin: 0 auto;
+    width: 900px;
+    height: 300px;
+
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 12px #909090b3;
+}
+
+.slides{
+    width: 900%;
+    height: 300px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    height: 100%;
+}
+
+.manual-navigation{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    
+    width: 900px;
+    margin-top: 7px;
+}
+
+.manual-btn{
+    background-color: rgb(180, 180, 180);
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.manual-btn:hover{
+    background-color: rgb(178, 143, 45);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#promocoes:hover{
+    color: red;
+}
