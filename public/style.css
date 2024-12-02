@@ -24,6 +24,10 @@ body{
     background-color: rgb(205 191 0);
 }
 
+strong{
+    color: rgb(151, 0, 0);
+}
+
 #cabecalho{
     display: flex;
     align-items: center;
