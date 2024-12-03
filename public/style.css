@@ -38,7 +38,7 @@ strong{
 
     width: 100%;
     margin-bottom: 100px;
-    height: 250px;
+    height: 300px;
 }
 
 #logo{
@@ -68,6 +68,7 @@ strong{
     border: none;
     font-family: "Montserrat";
     background-color: transparent;
+    font-size: 15px;
 }
 
 
@@ -75,7 +76,8 @@ strong{
 .menu{
     display: flex;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 240px;
+    font-size: 18px;
 }
 
 #menu-list{
@@ -131,17 +133,18 @@ strong{
     margin-left: 5px;
     margin-right: 20px;
 
-    width: 260px;
-    height: 380px;
-
-    border: 1px solid #b7b7b7;
+    width: 300px;
+    height: 450px;
+    border: 1px solid rgb(183, 183, 183);
     border-radius: 3px;
 }
 
 .descri{
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;  
+    
+    font-size: 18px;
 }
 
 .dynamic{
@@ -164,9 +167,9 @@ button{
     justify-content: center;
 
     border-radius: 3px;
-    padding: 5px;
-    font-size: 13px;
-    width: 100px;
+    padding: 8px;
+    font-size: 15px;
+    width: 120px;
     border: 0px;
     margin-top: 30px;
 
