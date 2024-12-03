@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,45 +22,127 @@
                 "cep": document.getElementById("cep").value
             }
 
-        const config = {
+            const config = {
                 method: 'POST',
-                headers: {'Content-Type' : 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(info)
-        }
+            }
 
             fetch("/validarcadastro", config)
-            .then(response => response.text())
-            .then(resposta =>{
-                alert(resposta);
-            })
+                .then(response => response.text())
+                .then(resposta => {
+                    alert(resposta);
+                })
 
         }
 
-        
+
     </script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+
+            background-color: rgb(226, 226, 226);
+            font-family: "Signika";
+        }
+
+        #cabecalho {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 3px;
+
+            height: 800px;
+            width: 700px;
+        }
+
+        h1{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input {
+            border-radius: 3px;
+            border: 1px solid;
+            background-color: transparent;
+            width: 500px;
+            padding: 6px;
+            font-size: 15px;
+        }
+
+        #buttons{
+            display: flex;
+        }
+
+        #enviar{
+            margin-top: 20px;
+            padding: 8px;
+            width: 100px;
+
+            font-family: "Montserrat";
+            font-size: 15px;
+
+            background-color: rgb(151, 151, 0);
+            color: white;
+
+            border: 0px;
+            border-radius: 3px;
+
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 
 
 </head>
 
 <body>
-    <h1>faça seu cadastro</h1>
 
-        <p>Nome</p>
+    <div id="cabecalho">
+
+        <div id="dados">
+        <h1>FAÇA SEU CADASTRO!</h1>
+
+        <p>Nome:</p>
         <input id="nome" placeholder="Nome e sobrenome">
-        <p>Usuario</p>
+        <p>Usuario:</p>
         <input id="usuario" placeholder="Como podemos te chamar?">
-        <p>Email</p>
+        <p>Email:</p>
         <input id="email" placeholder="Digite o seu Email...">
-        <p>Senha</p>
+        <p>Senha:</p>
         <input id="senha" type="password" placeholder="Crie uma senha">
-        <p>Cpf</p>
+        <p>Cpf:</p>
         <input id="cpf" placeholder="Digite o seu Cpf...">
-        <p>Telefone</p>
+        <p>Telefone:</p>
         <input id="telefone" placeholder="Telefone de contato">
-        <p>Cep</p>
+        <p>Cep:</p>
         <input id="cep" placeholder="Seu endereço">
-        <br>
-        <button onclick="enviar()">cadastrar</button>
+    </div>
+
+    <div id="buttons">
+        <button id="enviar" onclick="enviar()">cadastrar</button>
+    </div>
+
+    </div>
 
 </body>
+
 </html>
