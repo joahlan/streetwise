@@ -66,14 +66,58 @@
             width: 700px;
         }
 
-        h1{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-bottom: 40px;
         }
 
         p {
             font-size: 18px;
         }
+
+        #usuario,
+        #nome {
+            background-image: url(assets/bx-user.svg);
+            background-position: 510px 7px;
+            background-repeat: no-repeat;
+            padding: 10px 30px 12px 10px;
+        }
+
+        #email {
+            background-image: url(assets/bx-envelope.svg);
+            background-position: 510px 7px;
+            background-repeat: no-repeat;
+            padding: 10px 30px 12px 10px;
+        }
+
+        #senha {
+            background-image: url(assets/bx-lock-alt.svg);
+            background-position: 510px 7px;
+            background-repeat: no-repeat;
+            padding: 10px 30px 12px 10px;
+        }
+        
+        #cpf{
+            background-image: url(assets/bx-credit-card.svg);
+            background-position: 510px 7px;
+            background-repeat: no-repeat;
+            padding: 10px 30px 12px 10px;
+        }
+
+        #telefone{
+            background-image: url(assets/bxs-phone.svg);
+            background-position: 510px 7px;
+            background-repeat: no-repeat;
+            padding: 10px 30px 12px 10px;
+        }
+
+        #cep{
+            background-image: url(assets/bxs-edit-location.svg);
+            background-position: 510px 7px;
+            background-repeat: no-repeat;
+            padding: 10px 30px 12px 10px;
+        }
+
 
         input {
             border-radius: 3px;
@@ -84,11 +128,11 @@
             font-size: 15px;
         }
 
-        #buttons{
+        #buttons {
             display: flex;
         }
 
-        #enviar{
+        #enviar {
             margin-top: 20px;
             padding: 8px;
             width: 100px;
@@ -119,27 +163,27 @@
     <div id="cabecalho">
 
         <div id="dados">
-        <h1>FAÇA SEU CADASTRO!</h1>
+            <h1>FAÇA SEU CADASTRO!</h1>
 
-        <p>Nome:</p>
-        <input id="nome" placeholder="Nome e sobrenome">
-        <p>Usuario:</p>
-        <input id="usuario" placeholder="Como podemos te chamar?">
-        <p>Email:</p>
-        <input id="email" placeholder="Digite o seu Email...">
-        <p>Senha:</p>
-        <input id="senha" type="password" placeholder="Crie uma senha">
-        <p>Cpf:</p>
-        <input id="cpf" placeholder="Digite o seu Cpf...">
-        <p>Telefone:</p>
-        <input id="telefone" placeholder="Telefone de contato">
-        <p>Cep:</p>
-        <input id="cep" placeholder="Seu endereço">
-    </div>
+            <p>Nome:</p>
+            <input id="nome" placeholder="Nome e sobrenome">
+            <p>Usuario:</p>
+            <input id="usuario" placeholder="Como podemos te chamar?">
+            <p>Email:</p>
+            <input id="email" placeholder="Digite o seu Email...">
+            <p>Senha:</p>
+            <input id="senha" type="password" placeholder="Crie uma senha">
+            <p>Cpf:</p>
+            <input id="cpf" placeholder="Digite o seu Cpf...">
+            <p>Telefone:</p>
+            <input id="telefone" placeholder="Telefone de contato">
+            <p>Cep:</p>
+            <input id="cep" placeholder="Seu endereço">
+        </div>
 
-    <div id="buttons">
-        <button id="enviar" onclick="enviar()">cadastrar</button>
-    </div>
+        <div id="buttons">
+            <button id="enviar" onclick="enviar()">cadastrar</button>
+        </div>
 
     </div>
 

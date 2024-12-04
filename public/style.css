@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@ body{
     margin: 0%;
 }
 
-#banner{
+#banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,11 +24,11 @@ body{
     background-color: rgb(205 191 0);
 }
 
-strong{
+strong {
     color: rgb(151, 0, 0);
 }
 
-#cabecalho{
+#cabecalho {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ strong{
     height: 300px;
 }
 
-#logo{
+#logo {
     margin-right: 140px;
     margin-bottom: 15px;
     padding: 50px;
@@ -49,7 +49,7 @@ strong{
 
 
 
-.pesquisa{
+.pesquisa {
     display: flex;
 
     background-color: #c9c9c9;
@@ -61,43 +61,53 @@ strong{
     padding: 5px;
 }
 
-#input-pesquisa{
-    padding: 7px;
+#input-pesquisa {
     width: 100%;
+
     border-radius: 3px;
     border: none;
+
     font-family: "Montserrat";
-    background-color: transparent;
     font-size: 15px;
+    background-color: transparent;
+
+
+    background-image: url(assets/bx-search.svg);
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    padding: 10px 20px 12px 40px
+
+
 }
 
 
- 
-.menu{
+
+
+.menu {
     display: flex;
     position: absolute;
     margin-top: 240px;
     font-size: 18px;
 }
 
-#menu-list{
+#menu-list {
     color: black;
     text-decoration: none;
     transition: all 0.4s;
 }
 
-#menu-list:hover{
+#menu-list:hover {
     transform: translateY(-3px);
     color: rgb(170, 143, 69);
 }
 
-#menu-list:not(:last-child){
+#menu-list:not(:last-child) {
     margin-right: 80px;
 }
 
 
 
-#a-link{
+#a-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,26 +115,26 @@ strong{
     margin-right: 90px;
 }
 
-.icons{
+.icons {
     transition: all 0.4s;
 }
 
-.icons:hover{
+.icons:hover {
     transform: translateY(-3px);
 }
 
-.icons:not(:last-child){
+.icons:not(:last-child) {
     margin-right: 20px;
 }
 
 
 
-.layout{
+.layout {
     display: flex;
     padding: 30px;
 }
 
-.blusas{
+.blusas {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,15 +149,15 @@ strong{
     border-radius: 3px;
 }
 
-.descri{
+.descri {
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    
+    align-items: center;
+
     font-size: 18px;
 }
 
-.dynamic{
+.dynamic {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,13 +166,13 @@ strong{
     margin: 5px;
     margin-top: 15px;
 
-    background-color:rgb(205 191 0);
+    background-color: rgb(205 191 0);
 
     height: 25px;
     width: 100%;
 }
 
-button{
+button {
     display: flex;
     justify-content: center;
 
@@ -182,14 +192,14 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: rgb(56, 56, 56);
     transform: scale(1.05);
 }
 
 
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,7 +213,7 @@ footer{
     border-radius: 3px;
 }
 
-.info{
+.info {
     display: flex;
     margin-right: 150px;
     margin-left: 150px;
@@ -213,7 +223,7 @@ footer{
 
 
 
-.slider{
+.slider {
     margin: 0 auto;
     width: 900px;
     height: 300px;
@@ -223,38 +233,38 @@ footer{
     box-shadow: 0px 0px 12px #909090b3;
 }
 
-.slides{
+.slides {
     width: 900%;
     height: 300px;
     display: flex;
 }
 
-.slides input{
+.slides input {
     display: none;
 }
 
-.slide{
+.slide {
     width: 25%;
     position: relative;
 }
 
-.slide img{
+.slide img {
     display: flex;
     justify-content: center;
     width: 900px;
     height: 100%;
 }
 
-.manual-navigation{
+.manual-navigation {
     display: flex;
     justify-content: center;
     position: absolute;
-    
+
     width: 900px;
     margin-top: 7px;
 }
 
-.manual-btn{
+.manual-btn {
     background-color: rgb(180, 180, 180);
     padding: 4px;
     border-radius: 10px;
@@ -262,30 +272,30 @@ footer{
     transition: 0.5s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
     margin-right: 20px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
     background-color: rgb(178, 143, 45);
 }
 
-#radio1:checked ~ .first{
+#radio1:checked~.first {
     margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked~.first {
     margin-left: -25%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked~.first {
     margin-left: -50%;
 }
 
-#radio4:checked ~ .first{
+#radio4:checked~.first {
     margin-left: -75%;
 }
 
-#promocoes:hover{
+#promocoes:hover {
     color: red;
 }
