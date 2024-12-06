@@ -38,7 +38,7 @@ strong {
 
     width: 100%;
     margin-bottom: 100px;
-    height: 300px;
+    height: 250px;
 }
 
 #logo {
@@ -87,7 +87,7 @@ strong {
 #menu {
     display: flex;
     position: absolute;
-    margin-top: 240px;
+    margin-top: 210px;
 
     font-family: "Signika";
     font-size: 18px;
