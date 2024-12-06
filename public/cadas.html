@@ -130,10 +130,15 @@
 
         #buttons {
             display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+
+            margin: 20px;
         }
 
         #enviar {
             margin-top: 20px;
+            margin-right: 210px;
             padding: 8px;
             width: 100px;
 
@@ -152,6 +157,26 @@
 
         button:hover {
             transform: scale(1.05);
+        }
+
+        #a{
+            display: flex;
+            justify-content: center;
+
+            margin-top: 20px;
+            margin-right: 120px;
+            padding: 8px;
+            width: 90px;
+
+            font-family: "Montserrat";
+            font-size: 15px;
+            text-decoration: none;
+
+            border: 0px;
+            border-radius: 3px;
+
+            background-color: rgb(17 17 17);
+            color: white;
         }
     </style>
 
@@ -182,7 +207,9 @@
         </div>
 
         <div id="buttons">
-            <button id="enviar" onclick="enviar()">cadastrar</button>
+            <button id="enviar" onclick="enviar()">Cadastrar</button>
+
+            <a id="a" href="index.html">Voltar</a>
         </div>
 
     </div>

@@ -7,6 +7,9 @@
     <title>Streetwise</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
         body {
             display: flex;
             flex-direction: column;
@@ -17,45 +20,101 @@
             margin: 0%;
         }
 
+        #base {
+            display: flex;
+            align-items: center;
+
+            margin-top: 70px;
+        }
+
         #cabecalho {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
 
-            position: relative;
-            margin-top: 15vw;
-            right: 25vw;
+            margin-right: 145px;
 
-            background-color: #2e2e2e;
-            box-shadow: 0px 0px 12px #d6d6d6;
-            color: white;
-            
             width: 300px;
             height: 400px;
             border-radius: 3px;
         }
 
-        a{
+        #imagem {
+            width: 1200px;
+            height: 800px;
+
+            background-image: url(assets/barra-crew.jpg);
+            background-repeat: no-repeat;
+        }
+
+        a {
             color: rgb(182, 182, 0);
-            
+            margin: 10px;
             text-decoration: none;
+        }
+
+        input {
+            border-radius: 3px;
+            border: 1px solid;
+
+            background-color: transparent;
+
+            width: 280px;
+            padding: 6px;
+
+            font-size: 15px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+
+            width: 120px;
+            border: 0px;
+            border-radius: 3px;
+            padding: 8px;
+
+            font-family: "Montserrat";
+            font-size: 15px;
+
+            margin: 10px;
+            margin-top: 30px;
+
+            background-color: rgb(17 17 17);
+            box-shadow: 0px 0px 12px #9090907a;
+            color: white;
+
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(56, 56, 56);
+            transform: scale(1.05);
         }
     </style>
 </head>
 
 <body>
 
-    <div id="cabecalho">
-        <h1>Login</h1>
-        <p>Usuario</p>
-        <input placeholder="Digite seu Usuario...">
-        <p>Senha</p>
-        <input type="password" placeholder="Digite sua senha...">
-        <br>
-        <button>Entrar</button>
-        <br>
-        <a href="cadas.html">Criar conta</a>
+    <div id="base">
+
+        <div id="cabecalho">
+            <h1>Login</h1>
+
+            <div id="preen">
+                <p>Usuario:</p>
+                <input placeholder="Digite seu Usuario...">
+                <p>Senha:</p>
+                <input type="password" placeholder="Digite sua senha...">
+            </div>
+                <button>Entrar</button>
+                <a href="cadas.html">Criar conta</a>
+        </div>
+
+        <div id="imagem">
+        </div>
 
     </div>
 
