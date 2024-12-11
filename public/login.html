@@ -40,7 +40,13 @@
             border-radius: 3px;
         }
 
-
+        @media(max-width: 628px){
+            #cabecalho{
+                display: flex;
+                align-items: center;
+                margin-right: 0px;
+            }
+        }
 
         #imagem {
             width: 1200px;
@@ -50,10 +56,21 @@
             background-repeat: no-repeat;
         }
 
+        @media(max-width: 628px){
+            #imagem{
+                display: none;
+            }
+        }
+
         a {
-            color: rgb(182, 182, 0);
+            color: rgb(148, 128, 18);
             margin: 10px;
             text-decoration: none;
+            transition: 0.5s;
+        }
+
+        a:hover{
+            color: rgb(27, 27, 27);
         }
 
         input {
@@ -61,6 +78,7 @@
             border: 1px solid;
 
             background-color: transparent;
+            box-shadow: 0px 0px 12px #b9b9b97a;
 
             width: 280px;
             padding: 6px;
