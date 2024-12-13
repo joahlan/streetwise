@@ -46,23 +46,7 @@
 
 
 
-
-
-        @media(max-width: 628px){
-
-
-            html, body{
-                height: 100%;
-                width: 100%;
-                background-color: red;
-
-            }
-
-            body{
-                display: flex;
-                align-items: center;
-                margin-right: 0px;
-            }
+        @media (max-width: 628px) {
 
             #cabecalho{
                 width: 600px;
@@ -71,37 +55,31 @@
 
             #usuario,
             #nome{
-            background-image: url(assets/bx-user.svg);
             background-position: 230px 7px;
             }
 
             #email{
-            background-image: url(assets/bx-envelope.svg);
             background-position: 230px 7px;
             }
 
             #senha{
-            background-image: url(assets/bx-lock-alt.svg);
             background-position: 230px 7px;
             }
 
             #cpf{
-            background-image: url(assets/bx-credit-card.svg);
             background-position: 230px 7px;
             }
 
             #telefone{
-            background-image: url(assets/bxs-phone.svg);
             background-position: 230px 7px;
             }
 
             #cep{
-            background-image: url(assets/bxs-edit-location.svg);
             background-position: 230px 7px;
             }
 
 
-            input{
+            input{ 
                 width: 220px;
             }
 
@@ -118,11 +96,6 @@
 
 
 
-
-
-
-        @media(min-width: 629px){
-        
 
         body {
             display: flex;
@@ -206,7 +179,6 @@
             box-shadow: 0px 0px 12px #b9b9b97a;
             
             width: 500px;
-            padding: 6px;
             font-size: 15px;
         }
 
@@ -264,8 +236,7 @@
             color: white;
         }
 
-    }
-
+    
 
 
     
@@ -281,7 +252,6 @@
 
         <h1>FAÇA SEU CADASTRO!</h1>
 
-        <div id="dados">
 
             <p>Nome:</p>
             <input id="nome" placeholder="Nome e sobrenome">
@@ -297,15 +267,16 @@
             <input id="telefone" placeholder="Telefone de contato">
             <p>Cep:</p>
             <input id="cep" placeholder="Seu endereço">
+
+
+            <div id="buttons">
+                <button id="enviar" onclick="enviar()">Cadastrar</button>
+    
+                <a id="a" href="index.html">Voltar</a>
+            </div>
+
         </div>
 
-        <div id="buttons">
-            <button id="enviar" onclick="enviar()">Cadastrar</button>
-
-            <a id="a" href="index.html">Voltar</a>
-        </div>
-
-    </div>
 
 </body>
 

@@ -2,141 +2,174 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streetwise</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streetwise</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap");
 
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(238 238 238 / 49%);
-            font-family: "Signika";
-            margin: 0%;
-        }
 
-        #base {
-            display: flex;
-            align-items: center;
+*{
+  margin: 0px;
+}
 
-            margin-top: 70px;
-        }
 
-        #cabecalho {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
 
-            margin-right: 145px;
+html, body{
+  width: 100%;
+  height: 100%;
+}
 
-            width: 300px;
-            height: 400px;
-            border-radius: 3px;
-        }
 
-        @media(max-width: 628px){
-            #cabecalho{
-                display: flex;
-                align-items: center;
-                margin-right: 0px;
-            }
-        }
 
-        #imagem {
-            width: 1200px;
-            height: 800px;
+    @media (max-width: 628px) {
+      #cabecalho {
+        display: flex;
+        align-items: center;
+      }
 
-            background-image: url(assets/barra-crew.jpg);
-            background-repeat: no-repeat;
-        }
+      #imagem {
+        display: none;
+        margin: 0px;
+      }
 
-        @media(max-width: 628px){
-            #imagem{
-                display: none;
-            }
-        }
+      #base{
+        flex-direction: column;
+      }
+    }
 
-        a {
-            color: rgb(148, 128, 18);
-            margin: 10px;
-            text-decoration: none;
-            transition: 0.5s;
-        }
 
-        a:hover{
-            color: rgb(27, 27, 27);
-        }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(238 238 238 / 49%);
+      font-family: "Signika";
+      margin: 0%;
+    }
 
-        input {
-            border-radius: 3px;
-            border: 1px solid;
+    #base {
+      display: flex;
+      align-items: center;
+      margin-top: 70px;
+      width: 100%;
+      height: 100%;
+    }
 
-            background-color: transparent;
-            box-shadow: 0px 0px 12px #b9b9b97a;
+    #cabecalho {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-            width: 280px;
-            padding: 6px;
+      width: 35%;
+      height: 100%;
+      border-radius: 3px;
+    }
 
-            font-size: 15px;
-        }
+    h1{
+      margin: 20px;
+    }
 
-        button {
-            display: flex;
-            justify-content: center;
+    #preen{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    }
 
-            width: 120px;
-            border: 0px;
-            border-radius: 3px;
-            padding: 8px;
+    #imagem {
+      width: 65%;
+      height: 800px;
 
-            font-family: "Montserrat";
-            font-size: 15px;
+   
 
-            margin: 10px;
-            margin-top: 30px;
+      background-image: url(assets/barra-crew.jpg);
+      background-repeat: no-repeat;
+    }
 
-            background-color: rgb(17 17 17);
-            box-shadow: 0px 0px 12px #9090907a;
-            color: white;
+    a {
+      color: rgb(148, 128, 18);
+      margin: 10px;
+      text-decoration: none;
+      transition: 0.5s;
+    }
 
-            transition: 1s;
-            cursor: pointer;
-        }
+    a:hover {
+      color: rgb(27, 27, 27);
+    }
 
-        button:hover {
-            background-color: rgb(56, 56, 56);
-            transform: scale(1.05);
-        }
-    </style>
+    input {
+      border-radius: 3px;
+      border: 1px solid;
+
+      background-color: transparent;
+      box-shadow: 0px 0px 12px #b9b9b97a;
+
+      width: 280px;
+      padding: 6px;
+      margin: 10px;
+
+      font-size: 15px;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+
+      width: 120px;
+      border: 0px;
+      border-radius: 3px;
+      padding: 8px;
+
+      font-family: "Montserrat";
+      font-size: 15px;
+
+      margin: 10px;
+      margin-top: 30px;
+
+      background-color: rgb(17 17 17);
+      box-shadow: 0px 0px 12px #9090907a;
+      color: white;
+
+      transition: 1s;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(56, 56, 56);
+      transform: scale(1.05);
+    }
+
+  </style>
+
+
+
 </head>
 
 <body>
 
-    <div id="base">
+  <div id="base">
 
-        <div id="cabecalho">
-            <h1>Login</h1>
+    <div id="cabecalho">
+      <h1>Login</h1>
 
-            <div id="preen">
-                <p>Usuario:</p>
-                <input placeholder="Digite seu Usuario...">
-                <p>Senha:</p>
-                <input type="password" placeholder="Digite sua senha...">
-            </div>
-            <button>Entrar</button>
-            <a href="cadas.html">Criar conta</a>
-        </div>
+        <p>Usuario:</p>
+        <input placeholder="Digite seu Usuario..." />
+        <p>Senha:</p>
+        <input type="password" placeholder="Digite sua senha..." />
 
-        <div id="imagem">
-        </div>
+      <button>Entrar</button>
 
+      <a href="cadas.html">Criar conta</a>
     </div>
+
+    <div id="imagem"></div>
+
+  </div>
 
 </body>
 
