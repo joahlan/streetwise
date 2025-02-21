@@ -54,8 +54,8 @@ strong {
 .pesquisa {
     display: flex;
 
-    background-color: #c9c9c9;
-    box-shadow: 0px 0px 12px #cecece;
+    background-color: rgb(26, 26, 26);
+    box-shadow: 0px 0px 12px #3f3f3f;
     border-radius: 3px;
 
     margin-right: 160px;
@@ -65,19 +65,15 @@ strong {
 
 #input-pesquisa {
     width: 100%;
+    padding: 5px;
 
     border-radius: 3px;
-    border: none;
+    border: 0px;
 
-    font-family: "Montserrat";
-    font-size: 15px;
-    background-color: transparent;
-
-
-    background-image: url(assets/bx-search.svg);
-    background-position: 10px 7px;
-    background-repeat: no-repeat;
-    padding: 10px 20px 12px 40px
+    font-family:"Arial";
+    font-size: 17px;
+    background-color: rgb(26, 26, 26);
+    color: white;
 }
 
 
