@@ -6,21 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Streetwise</title>
 
+
+  <script>
+
+    function enviar() {
+      const data = {
+        usuario: document.getElementById("usuario").value,
+        senha: document.getElementById("senha").value
+      }
+
+      const config = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }
+
+      fetch("/validar_login", config)
+        .then(response => response.text())
+        .then(resposta => {
+          alert(resposta);
+        })
+    }
+
+  </script>
+
+
+
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap");
 
 
-*{
-  margin: 0px;
-}
+    * {
+      margin: 0px;
+    }
 
 
 
-html, body{
-  width: 100%;
-  height: 100%;
-}
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
 
 
 
@@ -35,7 +62,7 @@ html, body{
         margin: 0px;
       }
 
-      #base{
+      #base {
         flex-direction: column;
       }
     }
@@ -70,22 +97,22 @@ html, body{
       border-radius: 3px;
     }
 
-    h1{
+    h1 {
       margin: 20px;
     }
 
-    #preen{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    #preen {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     #imagem {
       width: 65%;
       height: 800px;
 
-   
+
 
       background-image: url(assets/barra-crew.jpg);
       background-repeat: no-repeat;
@@ -143,7 +170,6 @@ html, body{
       background-color: rgb(56, 56, 56);
       transform: scale(1.05);
     }
-
   </style>
 
 
@@ -157,12 +183,12 @@ html, body{
     <div id="cabecalho">
       <h1>Login</h1>
 
-        <p>Usuario:</p>
-        <input placeholder="Digite seu Usuario..." />
-        <p>Senha:</p>
-        <input type="password" placeholder="Digite sua senha..." />
+      <p>Usuario:</p>
+      <input id="usuario" placeholder="Digite seu Usuario..." />
+      <p>Senha:</p>
+      <input id="senha" type="password" placeholder="Digite sua senha..." />
 
-      <button>Entrar</button>
+      <button onclick="enviar()">Entrar</button>
 
       <a href="cadas.html">Criar conta</a>
     </div>

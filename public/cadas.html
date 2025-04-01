@@ -13,13 +13,12 @@
         function enviar() {
 
             const info = {
-                "nome": document.getElementById("nome").value,
-                "usuario": document.getElementById("usuario").value,
-                "email": document.getElementById("email").value,
-                "senha": document.getElementById("senha").value,
-                "cpf": document.getElementById("cpf").value,
-                "telefone": document.getElementById("telefone").value,
-                "cep": document.getElementById("cep").value
+                usuario: document.getElementById("usuario").value,
+                email: document.getElementById("email").value,
+                senha: document.getElementById("senha").value,
+                cpf: document.getElementById("cpf").value,
+                telefone: document.getElementById("telefone").value,
+                cep: document.getElementById("cep").value
             }
 
             const config = {
@@ -28,7 +27,7 @@
                 body: JSON.stringify(info)
             }
 
-            fetch("/validarcadastro", config)
+            fetch("/validar_cadastro", config)
                 .then(response => response.text())
                 .then(resposta => {
                     alert(resposta);
@@ -53,8 +52,7 @@
             }
 
 
-            #usuario,
-            #nome{
+            #usuario{
             width: 230px;
             background-position: 10px 7px;
             }
@@ -133,8 +131,7 @@
             font-size: 18px;
         }
 
-        #usuario,
-        #nome {
+        #usuario{
             background-image: url(assets/bx-user.svg);
             background-position: 510px 7px;
             background-repeat: no-repeat;
@@ -254,8 +251,6 @@
         <h1>FAÇA SEU CADASTRO!</h1>
 
 
-            <p>Nome:</p>
-            <input id="nome" placeholder="Nome e sobrenome">
             <p>Usuario:</p>
             <input id="usuario" placeholder="Como podemos te chamar?">
             <p>Email:</p>
