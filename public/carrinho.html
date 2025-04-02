@@ -1,11 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Streetwise</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            background-color: rgb(238 238 238 / 49%);
+            font-family: "Signika";
+            margin: 0%;
+        }
+
+        #cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #d6d6d6;
+            box-shadow: 0px 3px 12px 0px #b7b7b7;
+
+            width: 100%;
+            margin-bottom: 100px;
+            height: 250px;
+        }
+
+        #logo {
+            margin-right: 140px;
+            margin-bottom: 15px;
+            padding: 50px;
+        }
+
+
+
+
+
+        .pesquisa {
+            display: flex;
+
+            background-color: rgb(26, 26, 26);
+            box-shadow: 0px 0px 12px #3f3f3f;
+            border-radius: 3px;
+
+            margin-right: 160px;
+            width: 500px;
+            padding: 5px;
+        }
+
+        #input-pesquisa {
+            width: 100%;
+            padding: 5px;
+
+            border-radius: 3px;
+            border: 0px;
+
+            font-family: "Arial";
+            font-size: 17px;
+            background-color: rgb(26, 26, 26);
+            color: white;
+        }
+
+
+
+
+
+        #menu {
+            display: flex;
+            position: absolute;
+            margin-top: 210px;
+
+            font-family: "Signika";
+            font-size: 18px;
+        }
+
+        .promo {
+            margin-right: 60px;
+        }
+
+        #li-promo {
+            text-decoration: none;
+            color: #252525;
+            transition: 0.5s;
+        }
+
+        #li-promo:hover {
+            color: rgb(148, 128, 18);
+        }
+
+        .hidden-promo {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 110%;
+
+            background-color: #c2c2c2;
+            text-align: center;
+
+            font-size: 18px;
+            border-radius: 3px;
+
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .promo:hover .hidden-promo {
+            opacity: 2;
+            pointer-events: auto;
+        }
+
+
+
+        .acessorios {
+            margin-right: 60px;
+        }
+
+        #li-acessorios {
+            text-decoration: none;
+            color: #252525;
+            transition: 0.5s;
+        }
+
+        #li-acessorios:hover {
+            color: rgb(148, 128, 18);
+        }
+
+        .hidden-acessorios {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 110%;
+
+            background-color: #c2c2c2;
+            text-align: center;
+
+            font-size: 18px;
+            border-radius: 3px;
+
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .acessorios:hover .hidden-acessorios {
+            opacity: 2;
+            pointer-events: auto;
+        }
+
+
+
+        .moletom {
+            margin-right: 60px;
+        }
+
+        #li-moletom {
+            text-decoration: none;
+            color: #252525;
+            transition: 0.5s;
+        }
+
+        #li-moletom:hover {
+            color: rgb(148, 128, 18);
+        }
+
+        .hidden-moletom {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 110%;
+
+            background-color: #c2c2c2;
+            text-align: center;
+
+            font-size: 18px;
+            border-radius: 3px;
+
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .moletom:hover .hidden-moletom {
+            opacity: 2;
+            pointer-events: auto;
+        }
+
+
+
+        .bc {
+            margin-right: 60px;
+        }
+
+        #li-bc {
+            text-decoration: none;
+            color: #252525;
+            transition: 0.5s;
+        }
+
+        #li-bc:hover {
+            color: rgb(148, 128, 18);
+        }
+
+        .hidden-bc {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 110%;
+
+            background-color: #c2c2c2;
+            text-align: center;
+
+            font-size: 18px;
+            border-radius: 3px;
+
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .bc:hover .hidden-bc {
+            opacity: 2;
+            pointer-events: auto;
+        }
+
+
+
+        #li-camisetas {
+            text-decoration: none;
+            color: #252525;
+            transition: 0.5s;
+        }
+
+        #li-camisetas:hover {
+            color: rgb(148, 128, 18);
+        }
+
+        .hidden-camisetas {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 110%;
+
+            background-color: #c2c2c2;
+            text-align: center;
+
+            font-size: 18px;
+            border-radius: 3px;
+
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .camisetas:hover .hidden-camisetas {
+            opacity: 2;
+            pointer-events: auto;
+        }
+
+
+
+
+
+        #a-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: 90px;
+        }
+
+        .icons {
+            transition: all 0.4s;
+        }
+
+        .icons:hover {
+            transform: translateY(-3px);
+        }
+
+        .icons:not(:last-child) {
+            margin-right: 20px;
+        }
+
+
+
+
+        #caixa {
+            display: flex;
+            align-items: center;
+
+            width: 900px;
+        }
+
+        .titulo {
+            display: flex;
+
+            color: rgb(187, 174, 0);
+
+            padding: 5px;
+        }
+
+        #a {
+            display: flex;
+            justify-content: center;
+
+            margin-right: 1200px;
+            padding: 8px;
+            width: 90px;
+
+            font-family: "Montserrat";
+            font-size: 15px;
+            text-decoration: none;
+
+            border: 0px;
+            border-radius: 3px;
+
+            background-color: rgb(141, 0, 0);
+            box-shadow: 0px 0px 12px #b9b9b97a;
+            color: white;
+            transition: 0.5s;
+        }
+
+        #a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>olá</h1>>
+
+    <div id="cabecalho">
+
+        <img id="logo" src="assets/logonova.png" width="300px">
+
+        <div class="pesquisa">
+            <input id="input-pesquisa" type="search" placeholder="Pesquisar">
+        </div>
+
+        <div id="a-link">
+            <a class="icons" href="login.html">
+                <img src="assets/bx-user.svg" width="35px">
+            </a>
+            <a class="icons" href="carrinho.html">
+                <img src="assets/bx-cart-alt.svg" width="35px">
+            </a>
+            <a class="icons" href="grid.html">
+                <img src="assets/bxs-grid-alt.svg" width="35px">
+            </a>
+        </div>
+
+
+
+        <div id="menu">
+
+            <div class="promo">
+                <a id="li-promo" href="login.html">Promoções</a>
+                <div class="hidden-promo">
+                    Aqui está a div que aparece no hover!
+                </div>
+            </div>
+            <div class="acessorios">
+                <a id="li-acessorios" href="login.html">Acessórios</a>
+                <div class="hidden-acessorios">
+                    ok
+                </div>
+            </div>
+            <div class="moletom">
+                <a id="li-moletom" href="login.html">Moletom</a>
+                <div class="hidden-moletom">
+                    aaahah
+                </div>
+            </div>
+            <div class="bc">
+                <a id="li-bc" href="login.html">Bermudas/Calças</a>
+                <div class="hidden-bc">
+                    tamo
+                </div>
+            </div>
+            <div class="camisetas">
+                <a id="li-camisetas" href="menu_list/camisetas.html">Camisetas</a>
+                <div class="hidden-camisetas">
+                    algo
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a id="a" href="index.html">INICIO</a>
+
+    <div id="caixa">
+        <h1 class="titulo">CARRINHO DE COMPRAS:</h1>
+    </div>
+
+    <hr width="900px" style="margin: 10px;">
+
 </body>
+
 </html>
