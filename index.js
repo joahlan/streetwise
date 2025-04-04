@@ -44,22 +44,32 @@ app.post("/validar_login", (req, res) => {
 
     db.all("SELECT COUNT(*) AS total FROM USUARIOS WHERE USUARIO = ? AND SENHA = ?", [req.body.usuario, req.body.senha], (err, rows) => {
 
-        if(err){
-            console.log("Usuario não existe") 
+        if (err) {
+            console.log("Usuario não existe")
         }
 
-        if(rows.length > 0 && rows[0].total == 1){
+        if (rows.length > 0 && rows[0].total == 1) {
 
             console.log("Usuario encontrado")
             return res.send("/index.html")
-            }
+        }
 
-        else{
+        else {
 
             console.log("Não existe esse usuario")
             return res.send("/cadas.html")
         }
     });
+
+});
+
+
+// Rota para salvar o cookie
+app.get('/sc/:cod_produto', (req, res) => {
+
+    console.log(req.params.cod_produto) 
+    res.cookie("Usuario", [req.params.cod_produto], { maxAge: 90000, httpOnly: true });
+    res.send('Cookie "carrinho" foi salvo com sucesso!');
 
 });
 
